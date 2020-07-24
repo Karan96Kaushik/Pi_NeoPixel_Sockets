@@ -10,7 +10,7 @@ io.on('connection', client => {
 
 		console.log(data)
 
-		const python = spawn('python3', ['neo.py']);
+		const python = spawn('python3', ['neo_single.py', data]);
 
 		python.stdout.on('data', function (data) {
 			console.log('Pipe data from python script ...');
