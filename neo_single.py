@@ -5,9 +5,9 @@ import sys
 
 print(sys.argv)
 rgb = sys.argv[1]
-print(rgb[1:3])
-print(rgb[3:5])
-print(rgb[5:7])
+r = (rgb[1:3])
+g = (rgb[3:5])
+b = (rgb[5:7])
  
 # Choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D18
 # NeoPixels must be connected to D10, D12, D18 or D21 to work.
@@ -24,7 +24,8 @@ pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
 
-pixels.fill((255, 0, 0))
+pixels.fill((   int(r, 16) , int(g, 16) , int(b, 16)    ))
     # Uncomment this line if you have RGBW/GRBW NeoPixels
     # pixels.fill((255, 0, 0, 0))
+    
 pixels.show()
