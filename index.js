@@ -15,6 +15,7 @@ io.on('connection', client => {
 		python.stdout.on('data', function (data) {
 			console.log('Pipe data from python script ...');
 			dataToSend = data.toString();
+			console.log(dataToSend);
 		});
 
 		python.on('close', (code) => {
