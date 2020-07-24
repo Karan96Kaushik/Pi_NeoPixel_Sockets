@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "child_process": "^1.0.2",
     "nats": "^1.4.9",
     "socket.io": "^2.3.0"
   }
