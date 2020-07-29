@@ -31,7 +31,7 @@ ORDER = neopixel.GRB
 def run(r=r, g=g, b=b):
     for pixel in range(num_pixels):    
         pixels = neopixel.NeoPixel(
-            pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=OR$
+            pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
         )
 
         pixels.fill((   int(r, 16) , int(g, 16) , int(b, 16)    ))
